@@ -10,10 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class Controller_index {
 
     @GetMapping("/")
-    public ModelAndView example(@RequestParam(value = "name", defaultValue="User") String value){
+    public ModelAndView example(@RequestParam(value = "name", defaultValue = "User") String value) {
         ModelAndView result = new ModelAndView();
         result.addObject("userName", value);
-
         result.setViewName("index");
 
         return result;
